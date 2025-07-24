@@ -1,6 +1,6 @@
-# Rédaction et gestion bibliographiques avec l'IA
+# Gestion et rédaction bibliographiques avec l'IA
 
-Matériel de la formation "Rédaction et gestion bibliographiques avec l'IA" - stage Urfist 
+Matériel de la formation "Gestion et rédaction bibliographiques avec l'IA" - stage Urfist 
 
 ## Objectifs
 
