@@ -1,0 +1,480 @@
+---
+title: "Gestion et rédaction bibliographiques avec l'IA"
+author: "Frédérique Flamerie"
+licence: "CC BY-SA 4.0"
+date: "dernière màj: 2025-12-01"
+format:	revealjs
+lang: fr
+theme: simple
+slide-number: true
+logo: "img/by-sa.png"
+progress: true
+embed-resources: true
+bibliography: _biblio_IA.bib
+csl: apa.csl
+center: true
+---
+
+# Introduction
+
+## Objectifs
+
+-   Appréhender les enjeux techniques et éthiques du recours à l’intelligence artificielle pour la rédaction et la gestion bibliographiques.
+-   Identifier les atouts et les limites des services d’intelligence artificielle aux différentes étapes de la rédaction et de la gestion bibliographiques, de l’import et de la mise en forme des références bibliographiques à l’exploitation d’une bibliothèque de PDF.
+-   Installer et utiliser des extensions d’intelligence artificielle dans Zotero.
+
+## Programme
+
+-   Contexte et enjeux
+-   Typologie des usages, services et outils d’intelligence artificielle pour la rédaction et la gestion bibliographiques
+-   Mise en application dans Zotero : de l’IA à toutes les étapes de la bibliographie ?
+
+# Contexte et enjeux
+
+## Usages académiques l'IA générative (_GenIA_)
+
+Rédaction et gestion bibliographiques à la croisée de 2 sphères d'activités, dont elles partagent en partie les enjeux :
+
+* recherche bibliographique,
+* écriture académique.
+
+:::aside
+Pour une vue complète concernant la recherche bibliographique, voir [@bouchard2025WorkInProgressIA].
+:::
+## Usages académiques de la _GenIA_ : recherche {.smaller}
+
+* Au moins **60'000** articles en 2023 écrits avec l'assistance d'un LMM - soit 1% des articles indexés dans Dimensions ; **10%** des articles en biomédecine du 1er semestre 2024 pour lesquels le résumé écrit avec l'aide d'une IA [@lenharo2024ChatGPTTurns].
+* Enquête auprès de chercheurs et doctorants danois début 2024 [@andersen2025GenerativeArtificial] - 3 profils d'usages :
+    * _GenIA_ comme une **bête de somme** (_work horse_) : 35,2% des répondants - _GenIA_ pour modification code informatique, analyses statistiques, etc.
+    * _GenIA_ comme un **assistant linguistique** (_language assistant_) : 24% des répondants - _GenIA_ uniquement pour amélioration rédaction, y compris mise en forme des références.
+    * _GenIA_ comme un **accélérateur de recherche** (_research accelerator_) : 40,7% des répondants - _GenIA_ pour tous les usages, en particulier analyse de données.
+
+## Usages académiques de la _GenIA_ : recherche {.smaller}
+
+![Types de mentions de ChatGPT dans les publications scientifiques indexées par Web of Science et Scopus. [@kousha2024HowChatGPT]](img/fig1_chatgpt_acknowl.png)
+
+## Usages académiques de la _GenIA_ : enseignement {.smaller}
+
+[@zeller2024UsageIntelligences] présente les résultats de différentes études sur les usages par les étudiants.
+
+* Raisons principales d'utilisation : définition de mots ou de concepts (65%) et compréhension d'une partie de cours (51%) - **35%** pour rédaction de tout ou partie de leurs devoirs
+* **37%** des étudiants vérifient systématiquement le contenu généré par l'IA
+* Usage intensif par seulement 6% des étudiants
+  
+## Les différents types d’IA : rappels techniques
+
+![[@miao2024OrientationsPour] Ce livre de l'Unesco présente de façon simple le fonctionnement et les concepts principaux de l'IA.](img/IA_rappels_Unesco.png)
+
+## Les différents types d'IA : du _chatbot_ à l'IA agentique
+
+![L'évolution de la recherche [@zhao2025EmergingAI]](img/zhao_search_evolution.png)
+
+
+## _GenIA_ généralistes et académiques
+
+![ [@zhao2025EmergingAI] Les _GenIA_ académiques sont fondées sur le _RAG_, _Retrieval-Augmented Generation_, ou génération augmentée de récupération.](img/zhao_IAgen_academ.png)
+
+## Focus sur le RAG {.smaller}
+
+2 points clés distinguent les _GenIA_ académiques utilisant le _RAG_ des _GenIA_ généralistes.
+
+* **Sources de données spécifiques** : l'invite est augmentée avec le contexte récupéré de sources de données externes spécialisées = bases de données bibliographiques. NB **Semantic Scholar** est la principale et souvent l'unique base utilisée comme source. 
+* **Extraction** des données et non seulement génération pour construire la réponse.
+
+👉 Réponses plus précises, contenu non inventé, vérifications plus simples...
+
+... mais enjeux de **fidélité à la source** : les réponses extraites ne constituent pas forcément l'objet principal de l'article, ou résultent d'une mauvaise interprétation, ou encore la réponse générée est factuellement vraie mais ne peut pas être confirmée par la source.
+
+:::aside
+Voir [@bouchard2025WorkInProgressIA] : p. 13 ; voir également p. 31 sur les IA agentiques
+:::
+
+## Enjeux du recours à l’IA pour la gestion et la rédaction bibliographiques {.smaller}
+
+Rappel non exhaustif du rôle des citations dans les écrits académiques :
+
+* fournir des sources en appui aux assertions,
+* permettre la vérification de ces sources,
+* établir la paternité des contributions,
+* mettre en évidence l'étendue et la profondeur de la recherche menée sur un sujet.
+
+Pour cela les citations doivent être **exactes** et leur sélection **pertinente** et **objective**, du moins **non biaisée**.
+
+🤔 Ces qualités caractérisent-elles généralement les produits d'une _GenIA_?
+
+## L'enjeu d'exactitude : erreurs et hallucitations {.smaller}
+
+Les capacités imaginatives des _GenIA_ s'exercent aussi pour les références bibliographiques, produisant au mieux des références inexactes et au pire des références inventées, les "hallucitations".
+
+Cela a des impacts **globaux** sur la littérature académique.
+
+* Les hallucitations participent à la diffusion de fausses références dans la littérature académique - voir [@orduna-malea2023ChatGPTPotential] et [@camp2025CitationCatastrophe].
+* Les erreurs de DOI faussent les **comptes de citations** et génèrent des liens incorrects.
+
+## Pourquoi les _GenIA_ hallucitent-elles? {.smaller}
+
+* _GenIA_ conçue pour générer des réponses prioritairement **cohérentes et plausibles** plutôt qu'exactes, et qui suscitent un retour positif de l'utilisateur.
+* _GenIA_ ne sait pas distinguer les références bibliographiques du texte courant.
+
+👉 Système de transformation de texte et non de recherche d'information.
+
+* Dépend de la fréquence d'apparition des références dans les données d'entraînement? Les **livres** et les **articles très cités** seraient moins sujets aux hallucitations. 
+
+:::aside
+Voir : [@resnik2025EthicsUsing; @cabezas-clavijo2025AssessingPerformance; @oladokun2025HallucitationScientific; @walters2023FabricationErrors]
+:::
+
+## L'enjeu de pertinence
+
+La pertinence du choix des citations est affectée par :
+
+* la **couverture** des données et bases de données sources (y compris pour les IA académiques),
+* les **algorithmes** aboutissant à la sélection des résultats, ou l'effet "boîte noire" (y compris pour les IA académiques),
+* le fait que les citations sont le plus souvent de 3ème main. Les IA tendent à fournir des références citées sur des pages Wikipedia ; le **texte intégral** des sources n'est pas intégré dans les données d'entraînement de toutes les IA.
+
+## Le renforcement des biais {.smaller}
+
+* Fort recouvrement des réponses fournies par des chatbots différents 👉 réponses des AI contraintes à un cadre intellectuel étroit 👉 renforcement du biais de **confirmation** et des paradigmes existants
+* Renforcement de **l'effet Matthieu** : auteurs les plus cités = les plus fréquents = les plus à même d'être présents dans les réponses des IA (y compris dans les hallucitations)
+
+:::aside
+Sur l'enjeu de pertinence et le renforcement des biais, voir notamment : [@bouchard2025WorkInProgressIA; @spennemann2025OriginsVeracity; @cabezas-clavijo2025AssessingPerformance; @orduna-malea2023ChatGPTPotential; @lund2023ChatGPTNew]
+:::
+
+## L'illusion d'objectivité {.smaller}
+
+::::: columns
+::: {.column width="40%"}
+
+Illusion d'objectivité: croire que les outils d'IA n'ont **pas de point de vue** ou sont capables de représenter **tous les points de vue** possibles, alors qu'ils intègrent les points de vue de leurs données d'entraînement et de leurs développeurs.
+
+_[traduction adaptée de la légende de la figure]_
+:::
+
+::: {.column width="60%"}
+![Fig. 1: Illusions of understanding in AI-driven scientific research. c Illusion of objectivity [@messeri2024ArtificialIntelligence]](img/illusion_objectivite.png)
+:::
+:::::
+
+
+## Risques et opportunités {.smaller}
+
+* Illusion non seulement d'objectivité, mais aussi de **profondeur explicative** et de **largeur explicative** 
+* Risque de **perte de compétences** : notamment celles d'interprétation, évaluation et analyse, mobilisées par l'activité bibliographique
+* Opportunités : pour certaines tâches répétitives telles que l'encodage d'une liste (textuelle ou tabulée) vers un format informatique bibliographique ou la réécriture de citations et de bibliographie d'un style vers un autre ?
+
+  👉 Réponse dans quelques minutes 🕰️
+
+:::aside
+Sur les risques voir notamment [@messeri2024ArtificialIntelligence; @hutchins2025EveryReason; @maraninchi2025PourquoiJe]
+:::
+# Typologie des usages, services et outils d’intelligence artificielle pour la rédaction et la gestion bibliographiques
+
+## Générer une bibliographie prête à l’emploi {.smaller}
+
+Ou obtenir à partir d'une invite (_prompt_) formulée à une _GenIA_ une sélection de références rédigées, en sollicitant une IA généraliste ou une IA académique spécialisée.
+
+Différentes évaluations des performances avec des conclusions partagées : 
+
+* la persistance y compris dans les modèles les plus récents et les IA académiques de problèmes structurels tels que les hallucitations et l'inexactitude des métadonnées,
+* et donc la nécessité de tout vérifier et de tout relire...
+
+## Évaluation des bibliographies produites par les _GenIA_ : les problèmes 1/2 {.smaller}
+
+Les études évaluant les performances des _GenIA_ relèvent différentes catégories d'anomalies et d'erreurs, sur le fond et/ou la forme.
+
+* **La pertinence du choix des citations** : voir _supra_. 
+* **Le respect du style demandé** : voir _infra_ ; nous verrons ce point en détail concrètement quand nous aborderons la réécriture bibliographique ; voir [@giray2024ChatGPTReferences] pour un relevé des manquements à APA7.
+
+## Évaluation des bibliographies produites par les _GenIA_ : les problèmes 2/2  {.smaller}
+
+* **L'inauthenticité des références** : ce sont les hallucitations.
+* **L'inexactitude des métadonnées** : invention ou emprunt à des références existantes de certaines informations, notamment pour les volumes, numéros, pages et identifiants ; plus largement plutôt pour les données **numériques** que textuelles.
+
+👉 Voir notamment pour ces 2 aspects : [@bhattacharyya2023HighRates; @walters2023FabricationErrors; @cabezas-clavijo2025AssessingPerformance; @spennemann2025OriginsVeracity; @oladokun2025HallucitationScientific]
+
+## Évaluation des bibliographies produites par les _GenIA_ : étude sur 8 chatbots {.smaller}
+
+Parmi les différentes études publiées depuis celle de [@walters2023FabricationErrors], on retient plus particulièrement celle de [@cabezas-clavijo2025AssessingPerformance], qui analyse les performances de 8 chatbots au travers de 5 domaines disciplinaires, des sciences humaines et sociales aux sciences de la vie.
+
+* Modèle d'invite utilisé : "I am a university student working on my Final Degree Project. I need you to provide me with 10 relevant academic references in the field of Sociology. Please format the references in APA  7th edition."
+* Au total, sur un échantillon de 400 références : **26,5%** étaient réelles et exactes, **33,8%** réelles et partiellement correctes, **39,8%** incorrectes ou inventées.
+
+## Taux d'erreur par chatbot {.smaller}
+
+::::: columns
+::: {.column width="40%"}
+5 éléments pris en compte - en gras ceux qui doivent être exacts pour qu'une référence soit considérée comme correcte : 
+
+ * **auteur**,
+ * année,
+ * **titre**,
+ * **lieu de publication (revue ou éditeur)**,
+ * données de localisation (volume, numéro, pages, DOI).
+:::
+
+::: {.column width="60%"}
+![Figure 1. Percentage of completely correct, partially correct, and incorrect or fabricated references, by AI chatbot [@cabezas-clavijo2025AssessingPerformance]](img/Erreur_ChatBot.png)
+:::
+:::::
+
+## Taux d'erreur par domaine disciplinaire {.smaller}
+
+::::: columns
+::: {.column width="40%"}
+Différences par domaine disciplinaire à relier à la tendance à inventer des références moindre pour les **livres** que pour les **articles** : 12,9% de références incorrectes ou inventées pour les livres, 78% pour les articles.
+
+NB tendance chatbots à générer davantage de réfs de livres (58,3%) que de réfs d'articles (39,8%).
+:::
+
+::: {.column width="60%"}
+![Figure 4. Percentage of completely correct, partially correct, and wrong or fabricated references by area of knowledge [@cabezas-clavijo2025AssessingPerformance]](img/Erreur_Discipline.png)
+:::
+:::::
+
+## Se prémunir des références inventées ou inexactes {.smaller}
+
+Les _GenIA_ académiques utilisant le _RAG_ (ex. [Paperpal AI Reference Finder](https://paperpal.com/tools/ai-for-research)) permettent de se prémunir des hallucitations et d'avoir davantage de garanties concernant l'exactitude des informations bibliographiques.
+
+Impact de la **formulation de l'invite**? Impact de la spécificité, de la complexité de l'invite et du nombre de références demandées pour éviter les hallucitations [@acut2025ChatGPT40] ; impact de la formulation et du ton pour retrouver des références (même inexactes) utiles [@jensen2025AILiteracy].
+
+::: aside
+Exemple de référence partiellement inventée par [Hyperwrite](https://www.hyperwriteai.com) : seuls les auteurs, titre et date sont corrects - voir [la réponse complète de Hyperwrite](lien à ajouter) .
+
+ > Senzaki, M., Barber, J. R., Phillips, J. N., Carter, N. H., Cooper, C. B., Ditmer, M. A., ... & Francis, C. D. (2020). Sensory pollutants alter bird communities and species interactions. _Proceedings of the National Academy of Sciences_, 117(40), 24970-24981. <https://pmc.ncbi.nlm.nih.gov/articles/PMC7126038/>
+:::
+<!--
+::: aside
+FAQ de Paperpal : [Which sources does Search reference?
+](https://support.paperpal.com/support/solutions/articles/3000125797-which-sources-does-search-reference-)
+
+> Search is powered by R Discovery, which searches across 250M+ research articles sourced from Crossref, PubMed, Unpaywall, OpenAlex, and pre-print servers and leverages some leading publisher repositories across all academic disciplines
+:::
+-->
+## Réécrire une liste de références en changeant le style bibliographique {.smaller}
+Il s'agit là de seulement modifier la mise en forme d'une bibliographie, tâche _a priori_ à la portée d'une _GenIA_ généraliste. Tâches confiées à ChatGPT : réécrire une bibliographie d'un style bibliographique vers un autre. La bibliographie fournie a été créée avec Zotero, à partir d'une bibliothèque locale.
+
+* Tâche 1 : de ISO-690 vers APA7
+* Tache 2 : de APA7 vers les Presses universitaires de Rennes
+
+Les résultats de ces tests sont [dans le dossier **tests_IA_reecriture** sur le dépôt GitHub du stage](lien à ajouter) ; ce dossier contient également les bibliographies PUR et APA7 créées avec Zotero.
+
+🤔 Que pensez-vous des résultats? Repérez-vous des erreurs dans les résultats produits par ChatGPT? Ou au contraire des améliorations? Quelles différences observez-vous entre les bibliographies générées par ChatGPT et celles créées avec Zotero?
+
+## Réécriture bibliographique avec Thrix : un usage pédagogique? {.smaller}
+
+Le service en ligne [Thrix](https://www.thrix.ai/) promet de standardiser le style, corriger les erreurs, assurer la complétude et augmenter le contenu des citations et bibliographie.
+
+:::aside
+[FAQ > How does Thrix work?](https://www.thrix.ai/support/)
+
+> Thrix uses a proprietary system that combines intelligent pattern recognition with extensive dictionaries to identify the parts of a reference or full document. It then applies advanced algorithms to make precise edits. All changes are clearly tracked, ensuring transparency and control.
+> 
+> Unlike generative AI tools like ChatGPT, Thrix doesn’t guess what looks right – it’s designed to follow specific established rules. Thrix prioritizes accuracy, using authoritative sources like PubMed and Crossref, and adding comments when something isn’t clear.
+:::
+ 
+## Thrix : entrée
+![Thrix autorise en entrée le téléchargement d'un fichier au format `.docx` et le copier-coller de texte ou d'identifiants. En sortie, il propose les principaux styles bibliographiques et des options simplifiées  : _Correct and consistent_, _Just sort alphabetically_, etc.](img/thrix_sortie.png)
+
+## Thrix : sortie
+![En plus de la sortie rédigée, Thrix offre une interface de suivi des modifications, pour valider ou refuser les changements proposés.](img/thrix_input.png)
+
+## Analyser et enrichir sa bibliothèque
+
+* Analyser un corpus de PDF 👉 on en parle en détail juste après avec les intégrations Zotero
+* Enrichir sa bibliothèque à partir de quelques articles "graines" avec les services de recommandation tels que [Research Rabbit](https://www.researchrabbit.ai/) et [Connected Papers](https://www.connectedpapers.com/)
+
+:::aside
+On s'éloigne là de la gestion bibliographique au sens strict, voire de l'IA. Les algorithmes des services de recommandation utilisent plutôt des concepts traditionnels de **bibliométrie** et d'**analyse de réseau** et ne sont de fait pas fondés sur des LMM.
+:::
+
+## Enrichir sa bibliothèque avec Research Rabbit et Connected Papers
+
+![Comparatif de Research Rabbit et Connected Papers - [Tableau complet incluant Citation Chaser](https://github.com/fflamerie/intro_revlit/blob/main/docs/Fiche_ExploLit.pdf)](img/rrabbit_cpapers.png)
+
+# Mise en application dans Zotero : de l’IA à toutes les étapes de la bibliographie ?
+
+## Importer des références bibliographiques depuis un texte ou un tableur {.smaller}
+
+Transformer une bibliographie textuelle en un fichier de références pouvant être importé dans Zotero, voilà un des services que l'on peut attendre d'une _GenIA_. On peut distinguer 2 cas de figure.
+
+-   Liste de références fournie sous la forme d'un **texte rédigé**, au format `.docx`, `.pdf` ou autre. Si on dispose d'un fichier `.docx` ou `.odt` dans lequel les citations ont été insérées avec Mendeley ou Zotero et sont encore actives, le service [Reference Extractor](https://docs.zotero-fr.org/kbfr/kbfr_docs_cites_refextractor/) demeure une très bonne option.
+-   Liste de références fournie sous la forme d'un **tableur**, au format `.xlsx`, `.csv` ou autre.
+
+## Convertir au format BibTeX une liste de références rédigée {.smaller}
+
+Nous vous proposons pour cette tâche de comparer le résultat obtenu avec [AnyStyle.io](https://anystyle.io/) et celui obtenu avec [ChatGPT](https://chatgpt.com), en suivant les étapes ci-dessous.
+
+-   Copier les références contenues dans [le fichier **Test_texte_to_bibtex.docx**](lien%20à%20ajouter).
+-   Les coller dans l'interface d'AnyStyle, générer le fichier BibTex correspondant et importer ce dernier dans Zotero.
+-   Les coller dans une invite ChatGPT formulée par exemple ainsi : "pourrais-tu convertir les 15 références bibliographiques ci-dessous au format BibTex?", puis importer les références au format BibTeX dans Zotero.
+
+🤔 Que pensez-vous des performances de chacun des services? Comment évaluez-vous le résultat produit? Observez-vous des erreurs?
+
+::: aside
+Pour des tests analogues, voir [@mekhfi2024UtiliserIA; @schlafer2023ImporterReferences]
+:::
+
+## Convertir au format BibTeX une liste de références tabulée
+
+Cette fois on sollicite seulement ChatGPT, avec:
+
+-   [le fichier **Test_excel_to_bibtex.xlsx**](lien à ajouter),
+-   joint à l'invite : "Pourrais-tu convertir au format BibTex les références bibliographiques listées dans le fichier Excel ci-joint?"
+
+🤔 Quel bilan tirez-vous?
+
+:::aside
+☝️ Au cas où ChatGPT aurait progressé depuis mes propres tests de cet été, j'ai conservé les références au format .bib qu'il m'avait alors fournies : [fichier Test_excel_to_bib_chatGPT20250806.bib](lien%20à%20ajouter).
+:::
+## Analyser sa bibliothèque : vue d'ensemble {.smaller}
+
+Ou comment brancher un service de _GenIA_ sur sa bibliothèque Zotero, avec l'un des 3 services suivants : extension [ARIA](https://github.com/lifan0127/ai-research-assistant/), extension [PapersGPT](https://www.papersgpt.com/) et application dédiée [ZotAI](https://zotai.app/).
+
+Autres services non retenus (non exhaustif) :
+
+-   Extension [AskYourPDF](https://askyourpdf.com/zotero) : fonctionnalités (1 seul PDF à la fois, bibliothèques de groupe non prises en charge) et [version gratuite](https://askyourpdf.com/pricing) très limitées.
+-   Extension [Zotero GPT](https://github.com/MuiseDestiny/zotero-gpt) : fonctionnement moins intuitif, interface partiellement et tickets quasi entièrement en chinois.
+
+::: aside
+Pour un aperçu de tous ces services, y compris [l'extension scite](https://github.com/scitedotai/scite-zotero-plugin), voir : [@obrien2024MoreProductive].
+:::
+
+## Analyser sa bibliothèque : ARIA, PapersGPT et ZotAI
+
+![Consulter la fiche ["Comparatif de PapersGPT, ARIA et ZotAI"](lien à ajouter)](img/comp_zotero_genIA.png)
+
+
+
+## Analyser sa bibliothèque avec ARIA {.smaller}
+
+-   Avoir quelques références avec PDF significatives dans sa bibliothèque Zotero - par exemple ces 3 articles en libre accès :
+
+```         
+10.7717/peerj.18153
+10.1016/j.agee.2024.109215
+10.1016/j.rser.2022.112801
+```
+
+-   Installer l’extension ARIA dans Zotero
+
+👉 Rappel : [Installer une extension dans Zotero](https://docs.zotero-fr.org/kbfr/kbfr_extensions/#installer-et-configurer-une-extension)
+
+-   Paramétrer l’extension ARIA :
+
+    -   clé API OpenAI : mode d'emploi diapo suivante
+    -   choix du modèle : pour des tests et en l’absence d’abonnement à OpenAI, choisir **GPT-4o mini**
+
+## ARIA : créer une clé API OpenAI
+
+![Créer une clé API sur la plateforme OpenAI: <https://platform.openai.com> > *Your profile* > *API keys* > *Create new secret key*](img/openAI_cle_API.png)
+
+## Paramétrer ARIA
+
+![2 paramètres à configurer : la clé API OpenAI et le modèle OpenAI](img/ARIA_parametres.png)
+
+## Fonctionnalités d'ARIA
+
+::::: columns
+::: {.column width="60%"}
+-   Invites de **recherche** et d’**analyse**.
+-   Analyse de tout le contenu des bibliothèques, y compris **analyse visuelle** de figures extraites du texte intégral.
+-   Enregistrement des discussions : copier, créer une note indépendante ou créer une annotation.
+:::
+
+::: {.column width="40%"}
+![Options d'enregistrement d'une discussion](img/ARIA_save_reponse.png)
+:::
+:::::
+
+## ARIA : bibliothèque d'invites
+
+::::: columns
+::: {.column width="40%"}
+Fournir du contexte dans les invites avec :
+
+-   **l’autocomplétion** pour les auteurs, collections, titres et marqueurs,
+-   **le glisser-déposer** pour les documents, collections, annotations PDF.
+:::
+
+::: {.column width="60%"}
+![Fenêtre d'accueil d'ARIA : la bibliothèque d'invites](img/ARIA_menu.png)
+:::
+:::::
+
+## ARIA : invite de recherche
+
+::::: columns
+::: {.column width="40%"}
+Recherche dans « Ma bibliothèque » et dans les bibliothèques de groupe : l’autocomplétion affiche **TOUS** les marqueurs de toutes les bibliothèques.
+:::
+
+::: {.column width="60%"}
+![Saisie d'une question avec l'invite *Search your library*](img/ARIA_search_question.png)
+:::
+:::::
+
+## ARIA : résultats d’une invite de recherche
+
+![Résultats de l'invite *Search your library* présentée sur la diapo précédente.](img/ARIA_search_results.png)
+
+## ARIA : analyse visuelle
+
+![Glisser-déposer d’une annotation PDF de type zone dans la fenêtre d'invite.](img/ARIA_glisser_deposer.png)
+
+## Créer un style CSL {.smaller}
+
+Des tâches de codage informatique à confier à une _GenIA_ ? 2 tests effectués entre le 6 et le 14 août 2025.
+
+-   Création d’un style CSL à partir de consignes et d’exemples textuels contenus dans un fichier `.docx` : **tâche 1** confiée à ChatGPT et à DeepSeek.
+-   Modifications mineures (et simples pour une intelligence humaine) d’un style CSL existant : **tâche 2** confiée à ChatGPT et à GitHub Copilot.
+
+> Je voudrais apporter des modifications au style CSL ci-joint. Je voudrais que les noms d'auteur ne soient pas en petites capitales, que les prénoms soient écrits en entier et que les titres soient entre guillemets. Pourrais-tu modifier le code pour obtenir ce résultat?
+
+## Créer un style CSL : tâche 1 {.smaller}
+
+### Chat GPT
+
+-   Analyse des consignes et fourniture d’un modèle général plutôt bonne, mais...
+-   Fichier invalide → élément `style` + élément `text` (ne peut pas être enfant de `name`).
+-   Bonnes pratiques d’écriture non respectées : pour les guillemets, la ponctuation, etc.
+
+### DeepSeek
+
+-   Fichier invalide → attributs non autorisés.
+-   Bonnes pratiques d’écriture non respectées : pour les guillemets, la ponctuation, etc. 
+
+## Créer un style CSL : tâche 2 {.smaller}
+
+### Chat GPT
+
+-   Fichier non valide.
+-   Récapitulatif des corrections prometteur, mais… toujours des petites capitales, les prénoms pas en entier et la même mauvaise option que pour la tâche 1 pour les guillemets.
+
+### GitHub Copilot
+
+-   Fichier commenté et récapitulatif précis des changements effectués.
+-   Petites capitales supprimées, mais… les prénoms pas en entier et la même mauvaise option que ChatGPT et DeepSeek pour les guillemets.
+
+## Créer un style CSL : les fichiers des tests
+
+Les invites, les réponses des IA et les fichiers CSL sont sur le dépôt GitHub du stage, dans  [le dossier **Tests IA et CSL**](lien à ajouter).
+
+# Questions et conclusion
+
+## Contact et liens utiles
+
+📧 [frederique.flamerie@pm.me](mailto:frederique.flamerie@pm.me)
+
+🔗 <https://frederique-flamerie.fr>
+
+📑 [Support du stage "Gestion et rédaction bibliographiques avec l'IA"](https://github.com/fflamerie/biblio_IA)
+
+
+## Références citées {.scrollable}
+
+Télécharger les références citées : [bibliographie au format PDF](lien à ajouter) et [fichier bibliographique au format BIB](lien à ajouter)
+
+::: {#refs}
+
+:::

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="note" version="1.0" demote-non-dropping-particle="never">
+  <info>
+    <title>Consignes du style garni</title>
+    <id>http://www.zotero.org/styles/consignes-du-style-garni</id>
+    <link href="http://www.zotero.org/styles/consignes-du-style-garni" rel="self"/>
+    <link href="http://www.zotero.org/styles/humanities-full-repeated-authors" rel="template"/>
+    <link href="https://www.example.com" rel="documentation"/>
+    <author>
+      <name>Your Name</name>
+    </author>
+    <category citation-format="note"/>
+    <category field="humanities"/>
+    <updated>2023-11-15T00:00:00+00:00</updated>
+    <rights license="https://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
+  </info>
+  
+  <locale xml:lang="fr">
+    <terms>
+      <term name="editortranslator" form="short">éd.</term>
+      <term name="volume" form="short">vol.</term>
+      <term name="page" form="short">p.</term>
+      <term name="page-range-delimiter">-</term>
+    </terms>
+  </locale>
+  
+  <macro name="author">
+    <names variable="author">
+      <name form="long" and="text" delimiter-precedes-last="always"/>
+      <label form="short" prefix=" (" suffix=")"/>
+      <et-al font-style="italic" term="et-al" limit="4"/>
+    </names>
+  </macro>
+  
+  <macro name="editor">
+    <names variable="editor">
+      <name form="long" and="text" delimiter-precedes-last="always"/>
+      <label form="short" prefix=" (" suffix=")"/>
+      <et-al font-style="italic" term="et-al" limit="4"/>
+    </names>
+  </macro>
+  
+  <macro name="title">
+    <choose>
+      <if type="article-journal chapter paper-conference" match="any">
+        <text variable="title" prefix="« " suffix=" »" font-style="italic"/>
+      </if>
+      <else>
+        <text variable="title" font-style="italic"/>
+      </else>
+    </choose>
+  </macro>
+  
+  <macro name="publisher">
+    <group delimiter=", ">
+      <text variable="publisher-place"/>
+      <text variable="publisher"/>
+    </group>
+  </macro>
+  
+  <macro name="pages">
+    <group delimiter=", ">
+      <label variable="page" form="short"/>
+      <text variable="page"/>
+    </group>
+  </macro>
+  
+  <macro name="issued">
+    <date variable="issued">
+      <date-part name="year" prefix=" [" suffix="]"/>
+    </date>
+  </macro>
+  
+  <macro name="issued-year">
+    <date variable="issued">
+      <date-part name="year"/>
+    </date>
+  </macro>
+  
+  <citation et-al-min="4" et-al-use-first="1">
+    <layout prefix="(" suffix=")" delimiter=", ">
+      <text macro="author"/>
+      <text macro="issued-year"/>
+      <group delimiter=", ">
+        <text term="page" form="short"/>
+        <text variable="page"/>
+      </group>
+    </layout>
+  </citation>
+  
+  <bibliography et-al-min="4" et-al-use-first="1">
+    <layout>
+      <group delimiter=", ">
+        <text macro="author"/>
+        <group delimiter=" ">
+          <text macro="issued"/>
+          <text macro="issued-year" suffix="a" suffix-plural="false" suffix-delimiter=""/>
+          <text macro="issued-year" suffix="b" suffix-plural="false" suffix-delimiter=""/>
+          <text macro="issued-year" suffix="c" suffix-plural="false" suffix-delimiter=""/>
+        </group>
+        <text macro="title"/>
+        <text variable="container-title" font-style="italic"/>
+        <group delimiter=" ">
+          <text term="volume" form="short"/>
+          <text variable="volume"/>
+        </group>
+        <text macro="publisher"/>
+        <text macro="pages"/>
+      </group>
+    </layout>
+  </bibliography>
+</style>
