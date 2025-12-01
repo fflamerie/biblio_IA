@@ -239,7 +239,7 @@ Les _GenIA_ académiques utilisant le _RAG_ (ex. [Paperpal AI Reference Finder](
 Impact de la **formulation de l'invite**? Impact de la spécificité, de la complexité de l'invite et du nombre de références demandées pour éviter les hallucitations [@acut2025ChatGPT40] ; impact de la formulation et du ton pour retrouver des références (même inexactes) utiles [@jensen2025AILiteracy].
 
 ::: aside
-Exemple de référence partiellement inventée par [Hyperwrite](https://www.hyperwriteai.com) : seuls les auteurs, titre et date sont corrects - voir [la réponse complète de Hyperwrite](lien à ajouter) .
+Exemple de référence partiellement inventée par [Hyperwrite](https://www.hyperwriteai.com) : seuls les auteurs, titre et date sont corrects - voir [la réponse complète de Hyperwrite](https://github.com/fflamerie/biblio_IA/blob/main/docs/test_Hyperwrite_20250807.odt).
 
  > Senzaki, M., Barber, J. R., Phillips, J. N., Carter, N. H., Cooper, C. B., Ditmer, M. A., ... & Francis, C. D. (2020). Sensory pollutants alter bird communities and species interactions. _Proceedings of the National Academy of Sciences_, 117(40), 24970-24981. <https://pmc.ncbi.nlm.nih.gov/articles/PMC7126038/>
 :::
@@ -257,7 +257,7 @@ Il s'agit là de seulement modifier la mise en forme d'une bibliographie, tâche
 * Tâche 1 : de ISO-690 vers APA7
 * Tache 2 : de APA7 vers les Presses universitaires de Rennes
 
-Les résultats de ces tests sont [dans le dossier **tests_IA_reecriture** sur le dépôt GitHub du stage](lien à ajouter) ; ce dossier contient également les bibliographies PUR et APA7 créées avec Zotero.
+Les résultats de ces tests sont [dans le dossier **tests_IA_reecriture** sur le dépôt GitHub du stage](https://github.com/fflamerie/biblio_IA/tree/main/docs/tests_IA_reecriture) ; ce dossier contient également les bibliographies PUR et APA7 créées avec Zotero.
 
 🤔 Que pensez-vous des résultats? Repérez-vous des erreurs dans les résultats produits par ChatGPT? Ou au contraire des améliorations? Quelles différences observez-vous entre les bibliographies générées par ChatGPT et celles créées avec Zotero?
 
@@ -305,7 +305,7 @@ Transformer une bibliographie textuelle en un fichier de références pouvant ê
 
 Nous vous proposons pour cette tâche de comparer le résultat obtenu avec [AnyStyle.io](https://anystyle.io/) et celui obtenu avec [ChatGPT](https://chatgpt.com), en suivant les étapes ci-dessous.
 
--   Copier les références contenues dans [le fichier **Test_texte_to_bibtex.docx**](lien%20à%20ajouter).
+-   Copier les références contenues dans [le fichier **Test_texte_to_bibtex.docx**](https://github.com/fflamerie/biblio_IA/blob/main/docs/tests_IA_conversion/Test_texte_to_bibtex.docx).
 -   Les coller dans l'interface d'AnyStyle, générer le fichier BibTex correspondant et importer ce dernier dans Zotero.
 -   Les coller dans une invite ChatGPT formulée par exemple ainsi : "pourrais-tu convertir les 15 références bibliographiques ci-dessous au format BibTex?", puis importer les références au format BibTeX dans Zotero.
 
@@ -319,13 +319,13 @@ Pour des tests analogues, voir [@mekhfi2024UtiliserIA; @schlafer2023ImporterRefe
 
 Cette fois on sollicite seulement ChatGPT, avec:
 
--   [le fichier **Test_excel_to_bibtex.xlsx**](lien à ajouter),
+-   [le fichier **Test_excel_to_bibtex.xlsx**](https://github.com/fflamerie/biblio_IA/blob/main/docs/tests_IA_conversion/Test_excel_to_bibtex.xlsx),
 -   joint à l'invite : "Pourrais-tu convertir au format BibTex les références bibliographiques listées dans le fichier Excel ci-joint?"
 
 🤔 Quel bilan tirez-vous?
 
 :::aside
-☝️ Au cas où ChatGPT aurait progressé depuis mes propres tests de cet été, j'ai conservé les références au format .bib qu'il m'avait alors fournies : [fichier Test_excel_to_bib_chatGPT20250806.bib](lien%20à%20ajouter).
+☝️ Au cas où ChatGPT aurait progressé depuis mes propres tests de cet été, j'ai conservé les références au format .bib qu'il m'avait alors fournies : [fichier Test_excel_to_bib_chatGPT20250806.bib](https://github.com/fflamerie/biblio_IA/blob/main/docs/tests_IA_conversion/Test_excel_to_bib_chatGPT20250806.bib).
 :::
 ## Analyser sa bibliothèque : vue d'ensemble {.smaller}
 
@@ -342,7 +342,7 @@ Pour un aperçu de tous ces services, y compris [l'extension scite](https://gith
 
 ## Analyser sa bibliothèque : ARIA, PapersGPT et ZotAI
 
-![Consulter la fiche ["Comparatif de PapersGPT, ARIA et ZotAI"](lien à ajouter)](img/comp_zotero_genIA.png)
+![Consulter la fiche ["Comparatif de PapersGPT, ARIA et ZotAI"](https://github.com/fflamerie/biblio_IA/blob/main/docs/Fiche_IAgen_Zotero.pdf)](img/comp_zotero_genIA.png)
 
 
 
@@ -458,7 +458,7 @@ Des tâches de codage informatique à confier à une _GenIA_ ? 2 tests effectué
 
 ## Créer un style CSL : les fichiers des tests
 
-Les invites, les réponses des IA et les fichiers CSL sont sur le dépôt GitHub du stage, dans  [le dossier **Tests IA et CSL**](lien à ajouter).
+Les invites, les réponses des IA et les fichiers CSL sont sur le dépôt GitHub du stage, dans  [le dossier **Tests IA et CSL**](https://github.com/fflamerie/biblio_IA/tree/main/docs/tests_IA_CSL).
 
 # Questions et conclusion
 
@@ -473,7 +473,7 @@ Les invites, les réponses des IA et les fichiers CSL sont sur le dépôt GitHub
 
 ## Références citées {.scrollable}
 
-Télécharger les références citées : [bibliographie au format PDF](lien à ajouter) et [fichier bibliographique au format BIB](lien à ajouter)
+Télécharger les références citées : [bibliographie au format PDF](https://github.com/fflamerie/biblio_IA/blob/main/docs/biblio_IA_BIBLIO.pdf) et [fichier bibliographique au format BIB](https://github.com/fflamerie/biblio_IA/blob/main/docs/_biblio_IA.bib)
 
 ::: {#refs}
 
