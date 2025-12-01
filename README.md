@@ -10,13 +10,19 @@ Matériel de la formation "Gestion et rédaction bibliographiques avec l'IA" - s
 
 ## Cours
 
-:construction: En cours : rendez-vous en novembre-décembre 2025 
+📑 [Support de cours au format PDF](https://github.com/fflamerie/biblio_IA/blob/main/docs/biblio_IA_COURS.pdf)
 
-👉 à temps pour [le rendez-vous du 8 décembre à l'Urfist Occitanie](https://sygefor.reseau-urfist.fr/#/training/11238/14054?from=true)
+📑 [Fiche "De l’IA générative dans sa bibliothèque Zotero : PapersGPT, ARIA et ZotAI"](https://github.com/fflamerie/biblio_IA/blob/main/docs/Fiche_IAgen_Zotero.pdf)
 
-## Exercices
+📚 [Liste de ressources au format PDF](https://github.com/fflamerie/biblio_IA/blob/main/docs/biblio_IA_BIBLIO.pdf)
 
-:construction: En cours : rendez-vous en novembre-décembre 2025
+📚 [Liste de ressources au format BiBTeX](https://github.com/fflamerie/biblio_IA/blob/main/docs/_biblio_IA.bib)
+
+## Exercices et tests
+
+* [Réécriture bibliographique avec l'IA générative : changer le style d'une liste de références rédigée](https://github.com/fflamerie/biblio_IA/tree/main/docs/tests_IA_reecriture)
+* [Conversion de format bibliographique avec l'IA générative : convertir une liste de références rédigée et une liste tabulée](https://github.com/fflamerie/biblio_IA/tree/main/docs/tests_IA_conversion)
+* [Création d'un style bibliographique CSL avec l'IA générative](https://github.com/fflamerie/biblio_IA/tree/main/docs/tests_IA_CSL)
 
 ***
 ## Programme
