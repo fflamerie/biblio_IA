@@ -39,7 +39,7 @@ Rédaction et gestion bibliographiques à la croisée de 2 sphères d'activités
 * écriture académique.
 
 :::aside
-Pour une vue complète concernant la recherche bibliographique, voir [@bouchard2025WorkInProgressIA].
+Pour une vue complète concernant la recherche bibliographique, voir toutes les ressources d'A. Bouchard, et notamment son article sur le blog des Urfist [@bouchard2025WorkInProgressIA] et son cours sur Callisto [@bouchard2025IARecherche].
 :::
 ## Usages académiques de la _GenIA_ : recherche {.smaller}
 
@@ -53,17 +53,19 @@ Pour une vue complète concernant la recherche bibliographique, voir [@bouchard2
 
 ![Types de mentions de ChatGPT dans les publications scientifiques indexées par Web of Science et Scopus. [@kousha2024HowChatGPT]](img/fig1_chatgpt_acknowl.png)
 
-## Usages académiques de la _GenIA_ : enseignement {.smaller}
+## Usages académiques de la _GenIA_ : étudiants {.smaller}
 
-[@zeller2024UsageIntelligences] présente les résultats de différentes études sur les usages par les étudiants.
+![Types d'outils utilisés par les étudiants en France - [@pascal2025IAEnseignement]](img/etudiants_outils.png)
 
-* Raisons principales d'utilisation : définition de mots ou de concepts (65%) et compréhension d'une partie de cours (51%) - **35%** pour rédaction de tout ou partie de leurs devoirs
-* **37%** des étudiants vérifient systématiquement le contenu généré par l'IA
-* Usage intensif par seulement 6% des étudiants
   
-## Les différents types d’IA : rappels techniques
+## Rappels techniques
 
-![[@miao2024OrientationsPour] Ce livre de l'Unesco présente de façon simple le fonctionnement et les concepts principaux de l'IA.](img/IA_rappels_Unesco.png)
+
+![Techniques utilisées dans l'IA générative - [@miao2024OrientationsPour]](img/IA_rappels_Unesco.png)
+
+:::aside
+Voir aussi : ["Fonctionnement des IA" dans le cours d'A. Bouchard](https://callisto-formation.fr/course/view.php?id=952#module-22173)
+:::
 
 ## Les différents types d'IA : du _chatbot_ à l'IA agentique
 
@@ -74,11 +76,15 @@ Pour une vue complète concernant la recherche bibliographique, voir [@bouchard2
 
 ![ [@zhao2025EmergingAI] Les _GenIA_ académiques sont fondées sur le _RAG_, _Retrieval-Augmented Generation_, ou génération augmentée de récupération.](img/zhao_IAgen_academ.png)
 
+## Focus sur le RAG 
+
+![_GenIA_ simple vs. _GenIA_ avec _RAG_ - [@bouchard2025FormerUsagers]](img/genIA_vs_RAG.png)
+
 ## Focus sur le RAG {.smaller}
 
 2 points clés distinguent les _GenIA_ académiques utilisant le _RAG_ des _GenIA_ généralistes.
 
-* **Sources de données spécifiques** : l'invite est augmentée avec le contexte récupéré de sources de données externes spécialisées = bases de données bibliographiques. NB **Semantic Scholar** est la principale et souvent l'unique base utilisée comme source. 
+* **Sources de données spécifiques** : l'instruction est augmentée avec le contexte récupéré de sources de données externes spécialisées = bases de données bibliographiques. NB **Semantic Scholar** est la principale et souvent l'unique base utilisée comme source. 
 * **Extraction** des données et non seulement génération pour construire la réponse.
 
 👉 Réponses plus précises, contenu non inventé, vérifications plus simples...
@@ -88,6 +94,7 @@ Pour une vue complète concernant la recherche bibliographique, voir [@bouchard2
 :::aside
 Voir [@bouchard2025WorkInProgressIA] : p. 13 ; voir également p. 31 sur les IA agentiques
 :::
+
 
 ## Enjeux du recours à l’IA pour la gestion et la rédaction bibliographiques {.smaller}
 
@@ -172,7 +179,7 @@ Sur les risques voir notamment [@messeri2024ArtificialIntelligence; @hutchins202
 
 ## Générer une bibliographie prête à l’emploi {.smaller}
 
-Ou obtenir à partir d'une invite (_prompt_) formulée à une _GenIA_ une sélection de références rédigées, en sollicitant une IA généraliste ou une IA académique spécialisée.
+Ou obtenir à partir d'une instruction (_prompt_) formulée à une _GenIA_ une sélection de références rédigées, en sollicitant une IA généraliste ou une IA académique spécialisée.
 
 Différentes évaluations des performances avec des conclusions partagées : 
 
@@ -197,7 +204,7 @@ Les études évaluant les performances des _GenIA_ relèvent différentes catég
 
 Parmi les différentes études publiées depuis celle de [@walters2023FabricationErrors], on retient plus particulièrement celle de [@cabezas-clavijo2025AssessingPerformance], qui analyse les performances de 8 chatbots au travers de 5 domaines disciplinaires, des sciences humaines et sociales aux sciences de la vie.
 
-* Modèle d'invite utilisé : "I am a university student working on my Final Degree Project. I need you to provide me with 10 relevant academic references in the field of Sociology. Please format the references in APA  7th edition."
+* Modèle d'instruction utilisé : "I am a university student working on my Final Degree Project. I need you to provide me with 10 relevant academic references in the field of Sociology. Please format the references in APA  7th edition."
 * Au total, sur un échantillon de 400 références : **26,5%** étaient réelles et exactes, **33,8%** réelles et partiellement correctes, **39,8%** incorrectes ou inventées.
 
 ## Taux d'erreur par chatbot {.smaller}
@@ -236,7 +243,7 @@ NB tendance chatbots à générer davantage de réfs de livres (58,3%) que de r�
 
 Les _GenIA_ académiques utilisant le _RAG_ (ex. [Paperpal AI Reference Finder](https://paperpal.com/tools/ai-for-research)) permettent de se prémunir des hallucitations et d'avoir davantage de garanties concernant l'exactitude des informations bibliographiques.
 
-Impact de la **formulation de l'invite**? Impact de la spécificité, de la complexité de l'invite et du nombre de références demandées pour éviter les hallucitations [@acut2025ChatGPT40] ; impact de la formulation et du ton pour retrouver des références (même inexactes) utiles [@jensen2025AILiteracy].
+Impact de la **formulation de l'instruction**? Impact de la spécificité, de la complexité de l'instruction et du nombre de références demandées pour éviter les hallucitations [@acut2025ChatGPT40] ; impact de la formulation et du ton pour retrouver des références (même inexactes) utiles [@jensen2025AILiteracy].
 
 ::: aside
 Exemple de référence partiellement inventée par [Hyperwrite](https://www.hyperwriteai.com) : seuls les auteurs, titre et date sont corrects - voir [la réponse complète de Hyperwrite](https://github.com/fflamerie/biblio_IA/blob/main/docs/test_Hyperwrite_20250807.odt).
@@ -251,13 +258,14 @@ FAQ de Paperpal : [Which sources does Search reference?
 > Search is powered by R Discovery, which searches across 250M+ research articles sourced from Crossref, PubMed, Unpaywall, OpenAlex, and pre-print servers and leverages some leading publisher repositories across all academic disciplines
 :::
 -->
+
 ## Réécrire une liste de références en changeant le style bibliographique {.smaller}
 Il s'agit là de seulement modifier la mise en forme d'une bibliographie, tâche _a priori_ à la portée d'une _GenIA_ généraliste. Tâches confiées à ChatGPT : réécrire une bibliographie d'un style bibliographique vers un autre. La bibliographie fournie a été créée avec Zotero, à partir d'une bibliothèque locale.
 
 * Tâche 1 : de ISO-690 vers APA7
 * Tache 2 : de APA7 vers les Presses universitaires de Rennes
 
-Les résultats de ces tests sont [dans le dossier **tests_IA_reecriture** sur le dépôt GitHub du stage](https://github.com/fflamerie/biblio_IA/tree/main/docs/tests_IA_reecriture) ; ce dossier contient également les bibliographies PUR et APA7 créées avec Zotero.
+Les résultats de ces tests sont [dans le dossier **tests_IA_reecriture** sur le dépôt GitHub du stage > fichier **Test_rewrite_Reponses_ChatGPT_APA_PUR.odt**](https://github.com/fflamerie/biblio_IA/tree/main/docs/tests_IA_reecriture) ; ce dossier contient également les bibliographies PUR et APA7 créées avec Zotero.
 
 🤔 Que pensez-vous des résultats? Repérez-vous des erreurs dans les résultats produits par ChatGPT? Ou au contraire des améliorations? Quelles différences observez-vous entre les bibliographies générées par ChatGPT et celles créées avec Zotero?
 
@@ -285,7 +293,7 @@ Le service en ligne [Thrix](https://www.thrix.ai/) promet de standardiser le sty
 * Enrichir sa bibliothèque à partir de quelques articles "graines" avec les services de recommandation tels que [Research Rabbit](https://www.researchrabbit.ai/) et [Connected Papers](https://www.connectedpapers.com/)
 
 :::aside
-On s'éloigne là de la gestion bibliographique au sens strict, voire de l'IA. Les algorithmes des services de recommandation utilisent plutôt des concepts traditionnels de **bibliométrie** et d'**analyse de réseau** et ne sont de fait pas fondés sur des LMM.
+On s'éloigne là de la gestion bibliographique au sens strict, et de l'_IAGen_. Les algorithmes des services de recommandation utilisent plutôt des concepts traditionnels de **bibliométrie** et d'**analyse de réseau**, ils ne sont de fait fondés sur des LMM.
 :::
 
 ## Enrichir sa bibliothèque avec Research Rabbit et Connected Papers
@@ -307,7 +315,7 @@ Nous vous proposons pour cette tâche de comparer le résultat obtenu avec [AnyS
 
 -   Copier les références contenues dans [le fichier **Test_texte_to_bibtex.docx**](https://github.com/fflamerie/biblio_IA/blob/main/docs/tests_IA_conversion/Test_texte_to_bibtex.docx).
 -   Les coller dans l'interface d'AnyStyle, générer le fichier BibTex correspondant et importer ce dernier dans Zotero.
--   Les coller dans une invite ChatGPT formulée par exemple ainsi : "pourrais-tu convertir les 15 références bibliographiques ci-dessous au format BibTex?", puis importer les références au format BibTeX dans Zotero.
+-   Les coller dans une instruction ChatGPT formulée par exemple ainsi : "pourrais-tu convertir les 15 références bibliographiques ci-dessous au format BibTex?", puis importer les références au format BibTeX dans Zotero.
 
 🤔 Que pensez-vous des performances de chacun des services? Comment évaluez-vous le résultat produit? Observez-vous des erreurs?
 
@@ -320,12 +328,12 @@ Pour des tests analogues, voir [@mekhfi2024UtiliserIA; @schlafer2023ImporterRefe
 Cette fois on sollicite seulement ChatGPT, avec:
 
 -   [le fichier **Test_excel_to_bibtex.xlsx**](https://github.com/fflamerie/biblio_IA/blob/main/docs/tests_IA_conversion/Test_excel_to_bibtex.xlsx),
--   joint à l'invite : "Pourrais-tu convertir au format BibTex les références bibliographiques listées dans le fichier Excel ci-joint?"
+-   joint à l'instruction : "Pourrais-tu convertir au format BibTex les références bibliographiques listées dans le fichier Excel ci-joint?"
 
 🤔 Quel bilan tirez-vous?
 
 :::aside
-☝️ Au cas où ChatGPT aurait progressé depuis mes propres tests de cet été, j'ai conservé les références au format .bib qu'il m'avait alors fournies : [fichier Test_excel_to_bib_chatGPT20250806.bib](https://github.com/fflamerie/biblio_IA/blob/main/docs/tests_IA_conversion/Test_excel_to_bib_chatGPT20250806.bib).
+☝️ Au cas où ChatGPT aurait progressé depuis mes propres tests de cet été, j'ai conservé les références au format .bib qu'il m'avait alors fournies : [fichier **Test_excel_to_bib_chatGPT20250806.bib**](https://github.com/fflamerie/biblio_IA/blob/main/docs/tests_IA_conversion/Test_excel_to_bib_chatGPT20250806.bib).
 :::
 ## Analyser sa bibliothèque : vue d'ensemble {.smaller}
 
@@ -377,7 +385,7 @@ Pour un aperçu de tous ces services, y compris [l'extension scite](https://gith
 
 ::::: columns
 ::: {.column width="60%"}
--   Invites de **recherche** et d’**analyse**.
+-   Instructions de **recherche** et d’**analyse**.
 -   Analyse de tout le contenu des bibliothèques, y compris **analyse visuelle** de figures extraites du texte intégral.
 -   Enregistrement des discussions : copier, créer une note indépendante ou créer une annotation.
 :::
@@ -387,22 +395,22 @@ Pour un aperçu de tous ces services, y compris [l'extension scite](https://gith
 :::
 :::::
 
-## ARIA : bibliothèque d'invites
+## ARIA : bibliothèque d'instructions
 
 ::::: columns
 ::: {.column width="40%"}
-Fournir du contexte dans les invites avec :
+Fournir du contexte dans les instructions avec :
 
 -   **l’autocomplétion** pour les auteurs, collections, titres et marqueurs,
 -   **le glisser-déposer** pour les documents, collections, annotations PDF.
 :::
 
 ::: {.column width="60%"}
-![Fenêtre d'accueil d'ARIA : la bibliothèque d'invites](img/ARIA_menu.png)
+![Fenêtre d'accueil d'ARIA : la bibliothèque d'instructions](img/ARIA_menu.png)
 :::
 :::::
 
-## ARIA : invite de recherche
+## ARIA : instruction de recherche
 
 ::::: columns
 ::: {.column width="40%"}
@@ -410,17 +418,17 @@ Recherche dans « Ma bibliothèque » et dans les bibliothèques de groupe : 
 :::
 
 ::: {.column width="60%"}
-![Saisie d'une question avec l'invite *Search your library*](img/ARIA_search_question.png)
+![Saisie d'une question avec l'instruction *Search your library*](img/ARIA_search_question.png)
 :::
 :::::
 
-## ARIA : résultats d’une invite de recherche
+## ARIA : résultats d’une instruction de recherche
 
-![Résultats de l'invite *Search your library* présentée sur la diapo précédente.](img/ARIA_search_results.png)
+![Résultats de l'instruction *Search your library* présentée sur la diapo précédente.](img/ARIA_search_results.png)
 
 ## ARIA : analyse visuelle
 
-![Glisser-déposer d’une annotation PDF de type zone dans la fenêtre d'invite.](img/ARIA_glisser_deposer.png)
+![Glisser-déposer d’une annotation PDF de type zone dans la fenêtre d'instruction.](img/ARIA_glisser_deposer.png)
 
 ## Créer un style CSL {.smaller}
 
@@ -458,7 +466,7 @@ Des tâches de codage informatique à confier à une _GenIA_ ? 2 tests effectué
 
 ## Créer un style CSL : les fichiers des tests
 
-Les invites, les réponses des IA et les fichiers CSL sont sur le dépôt GitHub du stage, dans  [le dossier **Tests IA et CSL**](https://github.com/fflamerie/biblio_IA/tree/main/docs/tests_IA_CSL).
+Les instructions, les réponses des IA et les fichiers CSL sont sur le dépôt GitHub du stage, dans  [le dossier **Tests IA et CSL**](https://github.com/fflamerie/biblio_IA/tree/main/docs/tests_IA_CSL).
 
 # Questions et conclusion
 
