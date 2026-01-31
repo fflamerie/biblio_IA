@@ -2,7 +2,7 @@
 title: "Gestion et rédaction bibliographiques avec l'IA"
 author: "Frédérique Flamerie"
 licence: "CC BY-SA 4.0"
-date: "dernière màj: 2025-12-01"
+date: "2026"
 format:	revealjs
 lang: fr
 theme: simple
@@ -61,10 +61,10 @@ Pour une vue complète concernant la recherche bibliographique, voir toutes les 
 ## Rappels techniques
 
 
-![Techniques utilisées dans l'IA générative - [@miao2024OrientationsPour]](img/IA_rappels_Unesco.png)
+!["Fonctionnement des IA" dans le cours d'A. Bouchard - [@bouchard2025IARecherche]](img/ABouchart_fonctionnement_IA.png)
 
 :::aside
-Voir aussi : ["Fonctionnement des IA" dans le cours d'A. Bouchard](https://callisto-formation.fr/course/view.php?id=952#module-22173)
+Consulter en ligne l'infographie [Fonctionnement des IA](https://callisto-formation.fr/course/view.php?id=952#module-22173)
 :::
 
 ## Les différents types d'IA : du _chatbot_ à l'IA agentique
@@ -337,98 +337,33 @@ Cette fois on sollicite seulement ChatGPT, avec:
 :::
 ## Analyser sa bibliothèque : vue d'ensemble {.smaller}
 
-Ou comment brancher un service de _GenIA_ sur sa bibliothèque Zotero, avec l'un des 3 services suivants : extension [ARIA](https://github.com/lifan0127/ai-research-assistant/), extension [PapersGPT](https://www.papersgpt.com/) et application dédiée [ZotAI](https://zotai.app/).
+### Mettre de l'IA dans sa bibliothèque Zotero
+
+Exemples de 3 services  dans la fiche ["Comparatif de PapersGPT, ARIA et ZotAI"](https://github.com/fflamerie/biblio_IA/blob/main/docs/Fiche_IAgen_Zotero.pdf) : extension [ARIA](https://github.com/lifan0127/ai-research-assistant/), extension [PapersGPT](https://www.papersgpt.com/) et application dédiée [ZotAI](https://zotai.app/)… mais **ARIA et PapersGPT ne sont pas compatibles avec Zotero 8**.
 
 Autres services non retenus (non exhaustif) :
 
 -   Extension [AskYourPDF](https://askyourpdf.com/zotero) : fonctionnalités (1 seul PDF à la fois, bibliothèques de groupe non prises en charge) et [version gratuite](https://askyourpdf.com/pricing) très limitées.
--   Extension [Zotero GPT](https://github.com/MuiseDestiny/zotero-gpt) : fonctionnement moins intuitif, interface partiellement et tickets quasi entièrement en chinois.
+-   Extension [Zotero GPT](https://github.com/MuiseDestiny/zotero-gpt) : fonctionnement très peu intuitif, interface partiellement et tickets quasi entièrement en chinois.
 
 ::: aside
 Pour un aperçu de tous ces services, y compris [l'extension scite](https://github.com/scitedotai/scite-zotero-plugin), voir : [@obrien2024MoreProductive].
 :::
 
-## Analyser sa bibliothèque : ARIA, PapersGPT et ZotAI
+## Analyser sa bibliothèque : intégration Consensus {.smaller}
 
-![Consulter la fiche ["Comparatif de PapersGPT, ARIA et ZotAI"](https://github.com/fflamerie/biblio_IA/blob/main/docs/Fiche_IAgen_Zotero.pdf)](img/comp_zotero_genIA.png)
+Au lieu de mettre de l'IA dans sa bibliothèque, on va donc mettre sa bibliothèque dans l'IA grâce à la nouvelle intégration de [Consensus](https://consensus.app).
 
+1. Avoir un compte Zotero et un compte Consensus
+2. Depuis son compte Consensus, cliquer sur _Zotero Import_ pour importer sa bibliothèque Zotero dans sa bibliothèque Consensus
 
+⚠️ L'import est limité à la **bibliothèque personnelle** et aux **articles de revue** : les bibliothèques de groupe et les autres types de documents ne sont pas pris en charge. L'import n'est pas **dynamique** : si on ajoute un article dans la bibliothèque Zotero, il faut à nouveau cliquer sur _Zotero Import_ pour l'ajouter dans Consensus. 
 
-## Analyser sa bibliothèque avec ARIA {.smaller}
+## Analyser sa bibliothèque : fonctionnalités de Consensus {.smaller}
 
--   Avoir quelques références avec PDF significatives dans sa bibliothèque Zotero - par exemple ces 3 articles en libre accès :
+En plus des requêtes d'analyse standard d'une IA, Consensus permet de créer des chronologies, identifier les lacunes (_gaps_) et rechercher des articles pour combler ces lacunes. 
 
-```         
-10.7717/peerj.18153
-10.1016/j.agee.2024.109215
-10.1016/j.rser.2022.112801
-```
-
--   Installer l’extension ARIA dans Zotero
-
-👉 Rappel : [Installer une extension dans Zotero](https://docs.zotero-fr.org/kbfr/kbfr_extensions/#installer-et-configurer-une-extension)
-
--   Paramétrer l’extension ARIA :
-
-    -   clé API OpenAI : mode d'emploi diapo suivante
-    -   choix du modèle : pour des tests et en l’absence d’abonnement à OpenAI, choisir **GPT-4o mini**
-
-## ARIA : créer une clé API OpenAI
-
-![Créer une clé API sur la plateforme OpenAI: <https://platform.openai.com> > *Your profile* > *API keys* > *Create new secret key*](img/openAI_cle_API.png)
-
-## Paramétrer ARIA
-
-![2 paramètres à configurer : la clé API OpenAI et le modèle OpenAI](img/ARIA_parametres.png)
-
-## Fonctionnalités d'ARIA
-
-::::: columns
-::: {.column width="60%"}
--   Instructions de **recherche** et d’**analyse**.
--   Analyse de tout le contenu des bibliothèques, y compris **analyse visuelle** de figures extraites du texte intégral.
--   Enregistrement des discussions : copier, créer une note indépendante ou créer une annotation.
-:::
-
-::: {.column width="40%"}
-![Options d'enregistrement d'une discussion](img/ARIA_save_reponse.png)
-:::
-:::::
-
-## ARIA : bibliothèque d'instructions
-
-::::: columns
-::: {.column width="40%"}
-Fournir du contexte dans les instructions avec :
-
--   **l’autocomplétion** pour les auteurs, collections, titres et marqueurs,
--   **le glisser-déposer** pour les documents, collections, annotations PDF.
-:::
-
-::: {.column width="60%"}
-![Fenêtre d'accueil d'ARIA : la bibliothèque d'instructions](img/ARIA_menu.png)
-:::
-:::::
-
-## ARIA : instruction de recherche
-
-::::: columns
-::: {.column width="40%"}
-Recherche dans « Ma bibliothèque » et dans les bibliothèques de groupe : l’autocomplétion affiche **TOUS** les marqueurs de toutes les bibliothèques.
-:::
-
-::: {.column width="60%"}
-![Saisie d'une question avec l'instruction *Search your library*](img/ARIA_search_question.png)
-:::
-:::::
-
-## ARIA : résultats d’une instruction de recherche
-
-![Résultats de l'instruction *Search your library* présentée sur la diapo précédente.](img/ARIA_search_results.png)
-
-## ARIA : analyse visuelle
-
-![Glisser-déposer d’une annotation PDF de type zone dans la fenêtre d'instruction.](img/ARIA_glisser_deposer.png)
+![Chronologie des articles d'une collection dans Zotero](img/consensus_chronologie.png)
 
 ## Créer un style CSL {.smaller}
 
