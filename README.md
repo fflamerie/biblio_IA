@@ -1,6 +1,6 @@
 # Gestion et rédaction bibliographiques avec l'IA
 
-Matériel de la formation "Gestion et rédaction bibliographiques avec l'IA" - stage Urfist 
+Matériel de la formation "Gestion et rédaction bibliographiques avec l'IA" - stage Urfist / CRFCB
 
 ## Objectifs
 
@@ -12,7 +12,7 @@ Matériel de la formation "Gestion et rédaction bibliographiques avec l'IA" - s
 
 📑 [Support de cours au format PDF](https://github.com/fflamerie/biblio_IA/blob/main/docs/biblio_IA_COURS.pdf)
 
-📑 [Fiche "De l’IA générative dans sa bibliothèque Zotero : PapersGPT, ARIA et ZotAI"](https://github.com/fflamerie/biblio_IA/blob/main/docs/Fiche_IAgen_Zotero.pdf)
+📑 [Fiche "ChatGPT, Claude, etc. dans ma bibliothèque Zotero"](https://github.com/fflamerie/biblio_IA/blob/main/docs/Fiche_IAgen_Zotero.pdf)
 
 📚 [Liste de ressources au format PDF](https://github.com/fflamerie/biblio_IA/blob/main/docs/biblio_IA_BIBLIO.pdf)
 
