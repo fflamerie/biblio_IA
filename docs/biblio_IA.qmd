@@ -21,7 +21,7 @@ center: true
 
 -   Appréhender les enjeux techniques et éthiques du recours à l’intelligence artificielle pour la rédaction et la gestion bibliographiques.
 -   Identifier les atouts et les limites des services d’intelligence artificielle aux différentes étapes de la rédaction et de la gestion bibliographiques, de l’import et de la mise en forme des références bibliographiques à l’exploitation d’une bibliothèque de PDF.
--   Installer et utiliser des extensions d’intelligence artificielle dans Zotero.
+-   Installer et utiliser des services d’intelligence artificielle dans Zotero.
 
 ## Programme
 
@@ -105,11 +105,11 @@ Rappel non exhaustif du rôle des citations dans les écrits académiques :
 * établir la paternité des contributions,
 * mettre en évidence l'étendue et la profondeur de la recherche menée sur un sujet.
 
-Pour cela les citations doivent être **exactes** et leur sélection **pertinente** et **objective**, du moins **non biaisée**.
+Pour cela les citations doivent être [1] **exactes** et leur sélection [2] **pertinente** et [3] **objective**, du moins [4] **non biaisée**.
 
 🤔 Ces qualités caractérisent-elles généralement les produits d'une _GenIA_?
 
-## L'enjeu d'exactitude : erreurs et hallucitations {.smaller}
+## Enjeu [1] d'exactitude : erreurs et hallucitations {.smaller}
 
 Les capacités imaginatives des _GenIA_ s'exercent aussi pour les références bibliographiques, produisant au mieux des références inexactes et au pire des références inventées, les "hallucitations".
 
@@ -131,7 +131,7 @@ Cela a des impacts **globaux** sur la littérature académique.
 Voir : [@resnik2025EthicsUsing; @cabezas-clavijo2025AssessingPerformance; @oladokun2025HallucitationScientific; @walters2023FabricationErrors]
 :::
 
-## L'enjeu de pertinence
+## Enjeu [2] de pertinence
 
 La pertinence du choix des citations est affectée par :
 
@@ -139,16 +139,7 @@ La pertinence du choix des citations est affectée par :
 * les **algorithmes** aboutissant à la sélection des résultats, ou l'effet "boîte noire" (y compris pour les IA académiques),
 * le fait que les citations sont le plus souvent de 3ème main. Les IA tendent à fournir des références citées sur des pages Wikipedia ; le **texte intégral** des sources n'est pas intégré dans les données d'entraînement de toutes les IA.
 
-## Le renforcement des biais {.smaller}
-
-* Fort recouvrement des réponses fournies par des chatbots différents 👉 réponses des AI contraintes à un cadre intellectuel étroit 👉 renforcement du biais de **confirmation** et des paradigmes existants
-* Renforcement de **l'effet Matthieu** : auteurs les plus cités = les plus fréquents = les plus à même d'être présents dans les réponses des IA (y compris dans les hallucitations)
-
-:::aside
-Sur l'enjeu de pertinence et le renforcement des biais, voir notamment : [@bouchard2025WorkInProgressIA; @spennemann2025OriginsVeracity; @cabezas-clavijo2025AssessingPerformance; @orduna-malea2023ChatGPTPotential; @lund2023ChatGPTNew]
-:::
-
-## L'illusion d'objectivité {.smaller}
+## Enjeu [3] d'objectivité {.smaller}
 
 ::::: columns
 ::: {.column width="40%"}
@@ -162,6 +153,16 @@ _[traduction adaptée de la légende de la figure]_
 ![Fig. 1: Illusions of understanding in AI-driven scientific research. c Illusion of objectivity [@messeri2024ArtificialIntelligence]](img/illusion_objectivite.png)
 :::
 :::::
+
+## Enjeu [4] des biais {.smaller}
+
+* Fort recouvrement des réponses fournies par des chatbots différents 👉 réponses des AI contraintes à un cadre intellectuel étroit 👉 renforcement du biais de **confirmation** et des paradigmes existants
+* Renforcement de **l'effet Matthieu** : auteurs les plus cités = les plus fréquents = les plus à même d'être présents dans les réponses des IA (y compris dans les hallucitations)
+
+:::aside
+Sur l'enjeu de pertinence et le renforcement des biais, voir notamment : [@bouchard2025WorkInProgressIA; @spennemann2025OriginsVeracity; @cabezas-clavijo2025AssessingPerformance; @orduna-malea2023ChatGPTPotential; @lund2023ChatGPTNew]
+:::
+
 
 
 ## Risques et opportunités {.smaller}
@@ -241,7 +242,7 @@ NB tendance chatbots à générer davantage de réfs de livres (58,3%) que de r�
 
 ## Se prémunir des références inventées ou inexactes {.smaller}
 
-Les _GenIA_ académiques utilisant le _RAG_ (ex. [Paperpal AI Reference Finder](https://paperpal.com/tools/ai-for-research)) permettent de se prémunir des hallucitations et d'avoir davantage de garanties concernant l'exactitude des informations bibliographiques.
+Les _GenIA_ académiques utilisant le _RAG_ (ex. [Undermind](https://www.undermind.ai/), [Asta](https://asta.allen.ai/), etc.) permettent de se prémunir des hallucitations et d'avoir davantage de garanties concernant l'exactitude des informations bibliographiques.
 
 Impact de la **formulation de l'instruction**? Impact de la spécificité, de la complexité de l'instruction et du nombre de références demandées pour éviter les hallucitations [@acut2025ChatGPT40] ; impact de la formulation et du ton pour retrouver des références (même inexactes) utiles [@jensen2025AILiteracy].
 
@@ -260,14 +261,16 @@ FAQ de Paperpal : [Which sources does Search reference?
 -->
 
 ## Réécrire une liste de références en changeant le style bibliographique {.smaller}
-Il s'agit là de seulement modifier la mise en forme d'une bibliographie, tâche _a priori_ à la portée d'une _GenIA_ généraliste. Tâches confiées à ChatGPT : réécrire une bibliographie d'un style bibliographique vers un autre. La bibliographie fournie a été créée avec Zotero, à partir d'une bibliothèque locale.
+Il s'agit là de seulement modifier la mise en forme d'une bibliographie, tâche _a priori_ à la portée d'une _GenIA_ généraliste. 
+
+👉 Tâches confiées à ChatGPT : réécrire une bibliographie d'un style bibliographique vers un autre. La bibliographie fournie a été créée avec Zotero, à partir d'une bibliothèque locale.
 
 * Tâche 1 : de ISO-690 vers APA7
 * Tache 2 : de APA7 vers les Presses universitaires de Rennes
 
-Les résultats de ces tests sont [dans le dossier **tests_IA_reecriture** sur le dépôt GitHub du stage > fichier **Test_rewrite_Reponses_ChatGPT_APA_PUR.odt**](https://github.com/fflamerie/biblio_IA/tree/main/docs/tests_IA_reecriture) ; ce dossier contient également les bibliographies PUR et APA7 créées avec Zotero.
+Les résultats de ces tests sont [dans le dossier **tests_IA_reecriture** sur le dépôt GitHub du stage](https://github.com/fflamerie/biblio_IA/tree/main/docs/tests_IA_reecriture) > fichier **Test_rewrite_Reponses_ChatGPT_APA_PUR.odt**] ; ce dossier contient également les bibliographies PUR et APA7 créées avec Zotero.
 
-🤔 Que pensez-vous des résultats? Repérez-vous des erreurs dans les résultats produits par ChatGPT? Ou au contraire des améliorations? Quelles différences observez-vous entre les bibliographies générées par ChatGPT et celles créées avec Zotero?
+🤔 Que pensez-vous des résultats? Quelles différences observez-vous entre les bibliographies générées par ChatGPT et celles créées avec Zotero?
 
 ## Réécriture bibliographique avec Thrix : un usage pédagogique? {.smaller}
 
@@ -311,13 +314,15 @@ Transformer une bibliographie textuelle en un fichier de références pouvant ê
 
 ## Convertir au format BibTeX une liste de références rédigée {.smaller}
 
-Nous vous proposons pour cette tâche de comparer le résultat obtenu avec [AnyStyle.io](https://anystyle.io/) et celui obtenu avec [ChatGPT](https://chatgpt.com), en suivant les étapes ci-dessous.
+Nous allons pour cette tâche comparer les résultats obtenu par 3 services. Les fichiers à utiliser sont [dans le dossier **test_IA_conversion**](https://github.com/fflamerie/biblio_IA/blob/main/docs/tests_IA_conversion).
 
--   Copier les références contenues dans [le fichier **Test_texte_to_bibtex.docx**](https://github.com/fflamerie/biblio_IA/blob/main/docs/tests_IA_conversion/Test_texte_to_bibtex.docx).
--   Les coller dans l'interface d'AnyStyle, générer le fichier BibTex correspondant et importer ce dernier dans Zotero.
--   Les coller dans une instruction ChatGPT formulée par exemple ainsi : "pourrais-tu convertir les 15 références bibliographiques ci-dessous au format BibTex?", puis importer les références au format BibTeX dans Zotero.
+- [AnyStyle.io](https://anystyle.io/) : copier-coller les références du fichier **Test_texte_to_bibtex.docx** dans l'interface, puis générer le fichier BibTex et l'importer dans Zotero
 
-🤔 Que pensez-vous des performances de chacun des services? Comment évaluez-vous le résultat produit? Observez-vous des erreurs?
+- [ChatGPT](https://chatgpt.com/) : le fichier BibTeX à importer est déjà prêt
+
+- Extension de Zotero [Add Items from Text](https://github.com/jmiba/Zotero-add-items-from-text) - à installer avec [Add-on Market for Zotero](https://github.com/syt2/zotero-addons/releases)
+
+🤔 Que pensez-vous des performances de chacun des services? Comment évaluez-vous les résultats produits? 
 
 ::: aside
 Pour des tests analogues, voir [@mekhfi2024UtiliserIA; @schlafer2023ImporterReferences]
@@ -325,45 +330,39 @@ Pour des tests analogues, voir [@mekhfi2024UtiliserIA; @schlafer2023ImporterRefe
 
 ## Convertir au format BibTeX une liste de références tabulée
 
-Cette fois on sollicite seulement ChatGPT, avec:
+Cette fois on a sollicité seulement ChatGPT, avec [le fichier **Test_excel_to_bibtex.xlsx**](https://github.com/fflamerie/biblio_IA/blob/main/docs/tests_IA_conversion/Test_excel_to_bibtex.xlsx),
+joint à l'instruction : "Pourrais-tu convertir au format BibTex les références bibliographiques listées dans le fichier Excel ci-joint?"
 
--   [le fichier **Test_excel_to_bibtex.xlsx**](https://github.com/fflamerie/biblio_IA/blob/main/docs/tests_IA_conversion/Test_excel_to_bibtex.xlsx),
--   joint à l'instruction : "Pourrais-tu convertir au format BibTex les références bibliographiques listées dans le fichier Excel ci-joint?"
+🤔 Importez [le fichier résultant **Test_excel_to_bib_chatGPT20250806.bib**](https://github.com/fflamerie/biblio_IA/blob/main/docs/tests_IA_conversion/Test_excel_to_bib_chatGPT20250806.bib) dans Zotero. Quel bilan tirez-vous?
 
-🤔 Quel bilan tirez-vous?
+## Analyser sa bibliothèque : vue d'ensemble
 
-:::aside
-☝️ Au cas où ChatGPT aurait progressé depuis mes propres tests de cet été, j'ai conservé les références au format .bib qu'il m'avait alors fournies : [fichier **Test_excel_to_bib_chatGPT20250806.bib**](https://github.com/fflamerie/biblio_IA/blob/main/docs/tests_IA_conversion/Test_excel_to_bib_chatGPT20250806.bib).
-:::
-## Analyser sa bibliothèque : vue d'ensemble {.smaller}
+3 options possibles.
 
-### Mettre de l'IA dans sa bibliothèque Zotero
+* Connecter sa bibliothèque Zotero à une IA externe **dans Zotero** : voir fiche dédiée [ChatGPT, Claude, etc. dans ma bibliothèque Zotero](https://github.com/fflamerie/biblio_IA/blob/main/docs/Fiche_IAgen_Zotero.pdf).
+* Intégrer une IA **100% locale** à sa bibliothèque Zotero : [extension ZotSeek](https://github.com/introfini/zotseek). ⚠️ Ce service **ne génère pas de texte**, il vise la recherche au sein de la bibliothèque Zotero.
+* Intégrer sa bibliothèque Zotero à un service d'IA en ligne : intégration Consensus - 👉 🕰️ à suivre
 
-Exemples de 3 services  dans la fiche ["Comparatif de PapersGPT, ARIA et ZotAI"](https://github.com/fflamerie/biblio_IA/blob/main/docs/Fiche_IAgen_Zotero.pdf) : extension [ARIA](https://github.com/lifan0127/ai-research-assistant/), extension [PapersGPT](https://www.papersgpt.com/) et application dédiée [ZotAI](https://zotai.app/)… mais **ARIA et PapersGPT ne sont pas compatibles avec Zotero 8**.
 
-Autres services non retenus (non exhaustif) :
-
--   Extension [AskYourPDF](https://askyourpdf.com/zotero) : fonctionnalités (1 seul PDF à la fois, bibliothèques de groupe non prises en charge) et [version gratuite](https://askyourpdf.com/pricing) très limitées.
--   Extension [Zotero GPT](https://github.com/MuiseDestiny/zotero-gpt) : fonctionnement très peu intuitif, interface partiellement et tickets quasi entièrement en chinois.
-
-::: aside
-Pour un aperçu de tous ces services, y compris [l'extension scite](https://github.com/scitedotai/scite-zotero-plugin), voir : [@obrien2024MoreProductive].
-:::
-
-## Analyser sa bibliothèque : intégration Consensus {.smaller}
+## Analyser sa bibliothèque : intégration Consensus ½ {.smaller}
 
 Au lieu de mettre de l'IA dans sa bibliothèque, on va donc mettre sa bibliothèque dans l'IA grâce à la nouvelle intégration de [Consensus](https://consensus.app).
 
 1. Avoir un compte Zotero et un compte Consensus
 2. Depuis son compte Consensus, cliquer sur _Zotero Import_ pour importer sa bibliothèque Zotero dans sa bibliothèque Consensus
 
-⚠️ L'import est limité à la **bibliothèque personnelle** et aux **articles de revue** : les bibliothèques de groupe et les autres types de documents ne sont pas pris en charge. L'import n'est pas **dynamique** : si on ajoute un article dans la bibliothèque Zotero, il faut à nouveau cliquer sur _Zotero Import_ pour l'ajouter dans Consensus. 
+::: aside
+⚠️ L'import est limité à la **bibliothèque personnelle** et aux **articles de revue** : les bibliothèques de groupe et les autres types de documents ne sont pas pris en charge. L'import n'est pas **dynamique** : si on ajoute un article dans la bibliothèque Zotero, il faut à nouveau cliquer sur _Zotero Import_ pour l'ajouter dans Consensus. Les limitations liées à [l'offre souscrite](https://consensus.app/pricing/) s'appliquent également.
 
-## Analyser sa bibliothèque : fonctionnalités de Consensus {.smaller}
+⚠️ Certaines autres fonctionnalités de Consensus sont plus que sujettes à caution, notamment le _Consensus Meter_, voir [@tay20252025Deep] - et plus particulièrement [Why Vote Counting Is Methodologically Weak](https://aarontay.substack.com/i/178770843/why-vote-counting-is-methodologically-weak).
+:::
+
+## Analyser sa bibliothèque : intégration Consensus 2/2 {.smaller}
 
 En plus des requêtes d'analyse standard d'une IA, Consensus permet de créer des chronologies, identifier les lacunes (_gaps_) et rechercher des articles pour combler ces lacunes. 
 
 ![Chronologie des articles d'une collection dans Zotero](img/consensus_chronologie.png)
+
 
 ## Créer un style CSL {.smaller}
 

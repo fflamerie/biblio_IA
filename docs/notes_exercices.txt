@@ -1,0 +1,29 @@
+# Réécriture 
+
+## ISO690 -> APA
+
+* Page web : ordre jour/mois
+* Italique dans le titre
+* ISO utilise l'URL du champ URL, APA construit une URL à partir du DOI
+* In/Dans => différence France/Canada
+
+## APA -> PUR
+
+https://pur-editions.fr/page/14/consignes-aux-auteurs
+
+https://pur-editions.fr/pur/doc/consignes_auteurs.pdf - p4
+
+# Conversion texte -> bibtex
+
+Anystyle -> ne reconnaît pas thèse
+ChatGPT -> reconnaît thèse
+Add Items from Text -> reconnaît thèse et ajoute URL, retrouve DOI et autres infos pour article
+
+# Conversion tableur -> bibtex
+
+Vérifier les données sources en amont. 
+2 approches pour le séparateur entre le prénom et le nom des auteurs :
+
+* l'uniformiser dans le fichier source,
+* tenter de demander à l'IA de le prendre en compte.
+
