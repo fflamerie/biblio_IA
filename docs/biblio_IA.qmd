@@ -335,12 +335,12 @@ joint à l'instruction : "Pourrais-tu convertir au format BibTex les référence
 
 🤔 Importez [le fichier résultant **Test_excel_to_bib_chatGPT20250806.bib**](https://github.com/fflamerie/biblio_IA/blob/main/docs/tests_IA_conversion/Test_excel_to_bib_chatGPT20250806.bib) dans Zotero. Quel bilan tirez-vous?
 
-## Analyser sa bibliothèque : vue d'ensemble
+## Analyser sa bibliothèque : vue d'ensemble {.smaller}
 
 3 options possibles.
 
 * Connecter sa bibliothèque Zotero à une IA externe **dans Zotero** : voir fiche dédiée [ChatGPT, Claude, etc. dans ma bibliothèque Zotero](https://github.com/fflamerie/biblio_IA/blob/main/docs/Fiche_IAgen_Zotero.pdf).
-* Intégrer une IA **100% locale** à sa bibliothèque Zotero : [extension ZotSeek](https://github.com/introfini/zotseek). ⚠️ Ce service **ne génère pas de texte**, il vise la recherche au sein de la bibliothèque Zotero.
+* Intégrer une IA **100% locale** à sa bibliothèque Zotero : [extension Beaver](https://www.beaverapp.ai/) et [extension ZotSeek](https://github.com/introfini/zotseek). ⚠️ Ce service **ne génère pas de texte**, il vise la recherche au sein de la bibliothèque Zotero.
 * Intégrer sa bibliothèque Zotero à un service d'IA en ligne : intégration Consensus - 👉 🕰️ à suivre
 
 
