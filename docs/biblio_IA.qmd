@@ -339,8 +339,8 @@ joint à l'instruction : "Pourrais-tu convertir au format BibTex les référence
 
 3 options possibles.
 
-* Connecter sa bibliothèque Zotero à une IA externe **dans Zotero** : voir fiche dédiée [ChatGPT, Claude, etc. dans ma bibliothèque Zotero](https://github.com/fflamerie/biblio_IA/blob/main/docs/Fiche_IAgen_Zotero.pdf).
-* Intégrer une IA **100% locale** à sa bibliothèque Zotero : [extension Beaver](https://www.beaverapp.ai/) et [extension ZotSeek](https://github.com/introfini/zotseek). ⚠️ Ce service **ne génère pas de texte**, il vise la recherche au sein de la bibliothèque Zotero.
+* Connecter sa bibliothèque Zotero à une IA externe **dans Zotero** : voir fiche dédiée [ChatGPT, Claude, etc. dans ma bibliothèque Zotero](https://github.com/fflamerie/biblio_IA/blob/main/docs/Fiche_IAgen_Zotero.pdf)
+* Intégrer une IA **100% locale** à sa bibliothèque Zotero : [extension ZotSeek](https://github.com/introfini/zotseek). ⚠️ Ce service **ne génère pas de texte**, il vise la recherche au sein de la bibliothèque Zotero.
 * Intégrer sa bibliothèque Zotero à un service d'IA en ligne : intégration Consensus - 👉 🕰️ à suivre
 
 
