@@ -61,11 +61,8 @@ Pour une vue complète concernant la recherche bibliographique, voir toutes les 
 ## Rappels techniques
 
 
-!["Fonctionnement des IA" dans le cours d'A. Bouchard - [@bouchard2025IARecherche]](img/ABouchart_fonctionnement_IA.png)
+!["Fonctionnement des IA" dans le cours d'A. Bouchard - [@bouchard2025IARecherche] - [Consulter l'infographie en ligne](https://callisto-formation.fr/course/view.php?id=952#module-22173)](img/ABouchart_fonctionnement_IA.png)
 
-:::aside
-Consulter en ligne l'infographie [Fonctionnement des IA](https://callisto-formation.fr/course/view.php?id=952#module-22173)
-:::
 
 ## Les différents types d'IA : du _chatbot_ à l'IA agentique
 
